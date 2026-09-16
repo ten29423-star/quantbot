@@ -1,0 +1,36 @@
+{
+  "telegram_chat_id": "1152762773",
+
+  "rss_sources": [
+    "https://techcrunch.com/feed/",
+    "https://www.theverge.com/rss/index.xml",
+    "https://feeds.arstechnica.com/arstechnica/index",
+    "https://www.wired.com/feed/rss",
+    "https://www.technologyreview.com/feed/",
+    "https://feeds.bbci.co.uk/news/rss.xml",
+    "https://feeds.npr.org/1001/rss.xml",
+    "https://www.coindesk.com/arc/outboundfeeds/rss/",
+    "https://cointelegraph.com/rss",
+    "https://www.sciencedaily.com/rss/plants_animals.xml"
+  ],
+
+  "categories": {
+    "Animal": {
+      "emoji": "🟢",
+      "keywords": ["dog", "cat", "animal", "wildlife", "zoo"]
+    },
+    "AI": {
+      "emoji": "🟡",
+      "keywords": ["ai", "robot", "neural", "gpt", "model", "claude", "openai"]
+    },
+    "Crypto": {
+      "emoji": "🔴",
+      "keywords": ["memecoin", "pump.fun", "shitcoin", "coin", "crypto"]
+    }
+  },
+
+  "default_emoji": "⚪",
+  "default_category": "Other",
+
+  "check_interval_note": "Actual interval is controlled by the cron schedule in .github/workflows/run.yml, not this file"
+}
