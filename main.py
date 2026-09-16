@@ -16,9 +16,13 @@ import hashlib
 import feedparser
 import requests
 
+import datetime
+
 CONFIG_PATH = "config.json"
 SEEN_PATH = "seen_ids.json"
+STATS_PATH = "stats.json"
 MAX_SEEN_ENTRIES = 5000  # cap so the file doesn't grow forever
+MAX_STATS_DAYS = 90  # keep last ~3 months of daily counts
 
 
 def load_json(path, default):
@@ -123,7 +127,18 @@ def main():
         new_seen = new_seen[-MAX_SEEN_ENTRIES:]
 
     save_json(SEEN_PATH, new_seen)
-    print(f"Done. Sent {sent_count} new article(s).")
+
+    # Update per-day stats
+    stats = load_json(STATS_PATH, {})
+    today = datetime.datetime.utcnow().strftime("%Y-%m-%d")
+    stats[today] = stats.get(today, 0) + sent_count
+    # Keep only the most recent MAX_STATS_DAYS days
+    if len(stats) > MAX_STATS_DAYS:
+        for old_day in sorted(stats.keys())[:-MAX_STATS_DAYS]:
+            del stats[old_day]
+    save_json(STATS_PATH, stats)
+
+    print(f"Done. Sent {sent_count} new article(s). Today's total: {stats[today]}")
 
 
 if __name__ == "__main__":
