@@ -2,11 +2,11 @@ name: Run news bot
 
 on:
   schedule:
-    - cron: "*/5 * * * *"   # every 5 minutes
-  workflow_dispatch: {}       # lets you trigger it manually from the Actions tab
+    - cron: "*/5 * * * *"
+  workflow_dispatch: {}
 
 permissions:
-  contents: write            # needed so the workflow can commit seen_ids.json back
+  contents: write
 
 jobs:
   run-bot:
@@ -32,6 +32,6 @@ jobs:
         run: |
           git config user.name "news-bot"
           git config user.email "news-bot@users.noreply.github.com"
-          git add seen_ids.json stats.json
+          git add seen_ids.json stats.json source_health.json
           git diff --staged --quiet || git commit -m "Update seen articles [skip ci]"
           git push
