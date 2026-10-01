@@ -11,26 +11,47 @@
     "https://feeds.npr.org/1001/rss.xml",
     "https://www.coindesk.com/arc/outboundfeeds/rss/",
     "https://cointelegraph.com/rss",
-    "https://www.sciencedaily.com/rss/plants_animals.xml"
+    "https://www.sciencedaily.com/rss/plants_animals.xml",
+    "https://earther.com/rss",
+    "https://news.mongabay.com/feed/"
   ],
 
   "categories": {
     "Animal": {
       "emoji": "🟢",
-      "keywords": ["dog", "cat", "animal", "wildlife", "zoo"]
+      "keywords": [
+        "cat", "dog", "bird", "parrot", "fish", "shark", "whale", "dolphin",
+        "elephant", "tiger", "lion", "bear", "wolf", "fox", "monkey", "snake",
+        "lizard", "frog", "insect", "spider", "bee", "butterfly",
+        "animal", "species", "wildlife", "zoo", "mammal", "reptile",
+        "amphibian", "endangered", "extinct", "pet"
+      ],
+      "exclude_keywords": []
     },
     "AI": {
       "emoji": "🟡",
-      "keywords": ["ai", "robot", "neural", "gpt", "model", "claude", "openai"]
+      "keywords": ["ai", "robot", "neural", "gpt", "model", "claude", "openai"],
+      "exclude_keywords": []
     },
     "Crypto": {
       "emoji": "🔴",
-      "keywords": ["memecoin", "pump.fun", "shitcoin", "coin", "crypto"]
+      "keywords": ["memecoin", "pump.fun", "shitcoin", "coin", "crypto"],
+      "exclude_keywords": ["coin collection", "coin collector", "numismatic", "challenge coin"]
     }
   },
 
+  "sport_exclude_keywords": [
+    "sport", "football", "soccer", "basketball", "baseball", "hockey",
+    "tennis", "nfl", "nba", "nhl", "mlb", "olympics", "championship",
+    "tournament", "match", "league", "athlete", "coach", "stadium", "playoffs"
+  ],
+
   "default_emoji": "⚪",
   "default_category": "Other",
+
+  "source_health": {
+    "alert_after_days": 1
+  },
 
   "check_interval_note": "Actual interval is controlled by the cron schedule in .github/workflows/run.yml, not this file"
 }
