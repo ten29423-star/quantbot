@@ -1,0 +1,50 @@
+{
+  "https://techcrunch.com/feed/": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://www.theverge.com/rss/index.xml": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://feeds.arstechnica.com/arstechnica/index": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://www.wired.com/feed/rss": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://www.technologyreview.com/feed/": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://feeds.bbci.co.uk/news/rss.xml": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://feeds.npr.org/1001/rss.xml": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://www.coindesk.com/arc/outboundfeeds/rss/": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://cointelegraph.com/rss": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://www.sciencedaily.com/rss/plants_animals.xml": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://earther.com/rss": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  },
+  "https://news.mongabay.com/feed/": {
+    "last_success": "2026-10-01",
+    "last_alert": null
+  }
+}
