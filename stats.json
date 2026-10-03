@@ -14,8 +14,9 @@
     "Animal": 4
   },
   "2026-10-03": {
-    "total": 26,
-    "Other": 25,
-    "AI": 1
+    "total": 35,
+    "Other": 32,
+    "AI": 2,
+    "Animal": 1
   }
 }
